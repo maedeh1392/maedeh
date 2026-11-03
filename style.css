@@ -1,0 +1,12 @@
+*{box-sizing:border-box}body{margin:0;background:#eef2ff;color:#172554;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.app{max-width:620px;margin:auto;padding:18px}header{text-align:center;margin:10px 0 20px}h1{margin:0;font-size:28px}header p{margin:6px;color:#64748b}
+.panel,.game{background:white;border-radius:18px;padding:16px;margin:14px 0;box-shadow:0 5px 20px #17255412}
+button{border:0;border-radius:10px;padding:12px 16px;background:#2563eb;color:white;font-size:16px;font-weight:700;cursor:pointer}
+#join{background:#0f766e}.join,.share{display:flex;gap:8px;margin-top:10px}input{min-width:0;flex:1;border:1px solid #cbd5e1;border-radius:10px;padding:12px;font-size:16px}
+#invite{margin-top:14px;padding-top:10px;border-top:1px solid #e2e8f0}.share button{white-space:nowrap}
+.status{text-align:center;font-weight:700;padding:10px;background:#eff6ff;border-radius:10px}.players{display:flex;justify-content:space-between;gap:8px;margin:12px 0;font-size:14px}
+.board{width:min(92vw,480px);aspect-ratio:1;margin:12px auto;display:grid;grid-template-columns:repeat(8,1fr);border:4px solid #334155;border-radius:5px;overflow:hidden;touch-action:manipulation}
+.square{display:flex;align-items:center;justify-content:center;position:relative;font-size:clamp(26px,8vw,48px);cursor:pointer;user-select:none}
+.light{background:#f0d9b5}.dark{background:#b58863}.selected{outline:4px solid #facc15;outline-offset:-4px}.target:after{content:"";width:22%;height:22%;border-radius:50%;background:#16a34a99;position:absolute}
+.hint{text-align:center;color:#64748b;font-size:14px}.secondary{display:block;margin:10px auto;background:#475569}footer{text-align:center;color:#64748b;font-size:12px;padding:12px}
+@media(max-width:380px){.app{padding:10px}.players{font-size:12px}.join{flex-direction:column}}

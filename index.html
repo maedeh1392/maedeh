@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#172554">
+  <title>شطرنج دونفره آنلاین</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <header><h1>♟ شطرنج آنلاین</h1><p>با دوستت از دو گوشی جداگانه بازی کن</p></header>
+
+    <section class="panel">
+      <button id="create">ساخت اتاق جدید</button>
+      <div class="join">
+        <input id="roomInput" placeholder="کد اتاق دوستت" maxlength="6" autocomplete="off">
+        <button id="join">ورود به اتاق</button>
+      </div>
+      <div id="invite" hidden>
+        <p>این لینک را برای دوستت بفرست:</p>
+        <div class="share"><input id="inviteLink" readonly><button id="copy">کپی لینک</button></div>
+        <strong id="roomCode"></strong>
+      </div>
+    </section>
+
+    <section class="game">
+      <div class="status" id="status">برای شروع، اتاق بساز یا کد دوستت را وارد کن.</div>
+      <div class="players"><span id="whitePlayer">سفید: منتظر</span><span id="blackPlayer">سیاه: منتظر</span></div>
+      <div id="board" class="board" aria-label="صفحه شطرنج"></div>
+      <p class="hint" id="hint">ابتدا اتاق را بسازید یا به اتاق دوستتان وارد شوید.</p>
+      <button class="secondary" id="flip">چرخاندن صفحه</button>
+    </section>
+    <footer>حرکت‌ها روی سرور بررسی می‌شوند. با بستن صفحه ممکن است اتصال قطع شود.</footer>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
